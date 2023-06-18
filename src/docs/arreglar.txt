@@ -1,0 +1,12 @@
+- Arreglar los iconos, ponerle clases o ver una manera de que se vea mejor 
+  las propiedades que se le pasan, el width, color y eso en el componente
+  CARDS.
+
+- Ponerle las variables a los CSS, los colores y demás cositas
+
+- Verificar exactamente todos los tipados que puse con typescript, ya que 
+  necesito crear un archivo @types o algo asi, para no repetir tipos.
+
+- Pasar todo a index.tsx
+
+- Sacar la carpeta docs pa fuera

@@ -1,0 +1,8 @@
+.headerWrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 40px 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}

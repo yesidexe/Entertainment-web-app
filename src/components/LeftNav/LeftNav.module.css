@@ -1,0 +1,44 @@
+.NavLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 12px 0;
+    width: 80px;
+    background-color: #171717;
+    height: 100%;
+    
+}
+
+.NavLeft span {
+    cursor: pointer;
+}
+
+.ulNavLeft {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.ulNavLeft li {
+    width: 100%;
+    display: grid;
+    padding: 10px 0;
+    place-content: center;
+    cursor: pointer;
+}
+
+.ulNavLeft li:hover {
+    background-color: #0a0a0a;
+    transition: all 0.3s;
+}
+
+.icons{
+    width: 30px;
+    height: 30px;
+    color: #d4d4d4;
+}
+
