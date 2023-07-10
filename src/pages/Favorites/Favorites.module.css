@@ -1,0 +1,17 @@
+.icons{
+    color: #d4d4d4;
+    width: 50px;
+    height: 50px;
+}
+
+.alertContainer{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alertContainer p{
+    color: #d4d4d4;
+    font-size: 20px;
+}

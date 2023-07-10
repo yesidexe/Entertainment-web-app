@@ -1,8 +1,10 @@
 .formWrapper {
+    margin-top: 40px;
     display: flex;
     align-items: center;
     gap: 14px;
     height: 50px;
+    width: 100%;
 }
 
 .inputSearch input{

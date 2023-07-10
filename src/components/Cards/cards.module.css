@@ -1,7 +1,10 @@
+.cardWrapper{
+    width: 100%;
+}
+
 .cardWrapper figure{
     position: relative;
     cursor: pointer;
-    border-radius: 10px;
     overflow: hidden;
     filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 }
@@ -75,4 +78,10 @@
 .favIcon{
     width: 16px;
     height: 16px;
+}
+
+.circleWrapper{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }

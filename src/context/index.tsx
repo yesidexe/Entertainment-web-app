@@ -1,26 +1,34 @@
 import React, { ReactNode, useState } from 'react'
 
-type Status = 'idle'|'loading'|'success'|'error'
-type Props = {children: ReactNode;}
-
+type Props = { children: ReactNode; }
 type AppContextValue = {
-    setStatus:(status:Status)=>void
+    searchTerm: string,
+    setSearchTerm: (searchTerm: string) => void,
+    searchBy: string,
+    setSearchBy: (searchBy: string) => void,
+    actualGnre: string,
+    setActualGnre: (actualGnre: string) => void,
 }
 
 const AppContext = React.createContext<AppContextValue>({} as AppContextValue);
 
-function AppProvider({children}:Props){
-    const [status, setStatus] = useState<Status>('idle')
+function AppProvider({ children }: Props) {
+    const [searchTerm, setSearchTerm] = useState<string>('')
+    const [searchBy, setSearchBy] = useState<string>('multi')
+    const [actualGnre, setActualGnre] = useState<string>('')
 
-    
-
-    return(
+    return (
         <AppContext.Provider value={{
-            setStatus,
+            searchTerm,
+            setSearchTerm,
+            searchBy,
+            setSearchBy,
+            actualGnre,
+            setActualGnre,
         }}>
             {children}
         </AppContext.Provider>
     )
 }
 
-export {AppProvider, AppContext}
+export { AppProvider, AppContext }

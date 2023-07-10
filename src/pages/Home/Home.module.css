@@ -1,0 +1,36 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.h2Title {
+    font-weight: 400;
+    color: #d4d4d4;
+}
+
+.icon {
+    color: #dc2626;
+    width: 26px;
+    height: 26px;
+}
+
+.trendingWrapper {
+    overflow: hidden;
+    background: rgb(38, 38, 38);
+    background: radial-gradient(circle, rgba(38, 38, 38, 1) 0%, rgba(10, 10, 10, 1) 20%);
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}

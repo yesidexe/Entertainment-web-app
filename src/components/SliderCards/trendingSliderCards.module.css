@@ -1,0 +1,70 @@
+.slide {
+    position: relative;
+    cursor: pointer;
+}
+
+.slide figure img {
+    object-fit: cover;
+}
+
+.slide:hover figure img {
+    transform: scale(1.1);
+    opacity: 50%;
+    transition: all .2s;
+}
+
+.favWrapper {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+    background-color: #0a0a0aba;
+    color: #fafafa;
+    transition: all .2s;
+}
+
+.favWrapper:hover {
+    background-color: #fafafa;
+    color: #0a0a0aba;
+}
+
+.favIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.cardDetails {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: 0;
+    padding: 0 20px 10px 20px;
+}
+
+.cardDetails span {
+    display: flex;
+    align-items: center;
+    color: #fafafa;
+    font-size: 18px;
+}
+
+.cardDetails p::first-letter{
+    text-transform: uppercase;
+}
+
+.cardTitle {
+    color: #fafafa;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.icons {
+    width: 20px;
+    height: 20px;
+    color: #fafafa;
+}

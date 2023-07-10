@@ -1,0 +1,29 @@
+.movieWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.icon {
+    color: #dc2626;
+    width: 26px;
+    height: 26px;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.h2Title {
+    font-weight: 400;
+    color: #d4d4d4;
+}
