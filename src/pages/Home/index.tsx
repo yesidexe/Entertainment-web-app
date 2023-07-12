@@ -1,5 +1,5 @@
 import { CircleArrowUpIcon, FlameIcon, StarIcon } from "../../components/Icons";
-import CardsWrapper from '../../components/CardsWrapper';
+import CardsContainer from '../../components/CardsContainer';
 import Slider from '../../components/Slider';
 import Layout from "../../components/Layout";
 
@@ -32,7 +32,7 @@ function Home() {
                         <h2 className={styles.h2Title}>Top Rated Movies</h2>
                         <StarIcon strokeWidth={2} className={styles.icon} />
                     </span>
-                    <CardsWrapper type={'movie'} lists="top_rated" />
+                    <CardsContainer type={'movie'} lists="top_rated" />
                 </section>
 
                 {/* Trending TvShows  */}
@@ -42,7 +42,7 @@ function Home() {
                         <FlameIcon strokeWidth={2} className={styles.icon} />
                     </span>
                     <div className={styles.trendingWrapper}>
-                        <Slider type={'mtv'} data={trendingTv_data} imageType={'poster'} slidesPerView={4.5} />
+                        <Slider type={'tv'} data={trendingTv_data} imageType={'poster'} slidesPerView={4.5} />
                     </div>
                 </section>
 
@@ -52,7 +52,7 @@ function Home() {
                         <h2 className={styles.h2Title}>Top Rated Tv Shows</h2>
                         <StarIcon strokeWidth={2} className={styles.icon} />
                     </span>
-                    <CardsWrapper type={'tv'} lists="top_rated" />
+                    <CardsContainer type={'tv'} lists="top_rated" />
                 </section>
             </div>
         </Layout>

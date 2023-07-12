@@ -1,16 +1,18 @@
 import { useContext, useState } from "react";
 import { SearchIcon } from "../Icons";
-import styles from "./SearchBar.module.css"
 import { AppContext } from "../../context";
 import { useNavigate } from 'react-router-dom';
+import styles from "./SearchBar.module.css"
 
 
 function SearchBar() {
     const [ query, setQuery ] = useState<string>('')
-    const { setSearchTerm, searchBy } = useContext(AppContext)
+    const { setSearchTerm } = useContext(AppContext)
+
+    const currenPath = window.location.pathname
+    const type = currenPath.includes('movie') ? 'movie' : (currenPath.includes('tv') ? 'tv' : '')
+    
     const navigate = useNavigate()
-
-
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -27,7 +29,7 @@ function SearchBar() {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     type="text"
-                    placeholder={`Search for ${searchBy === 'movie' ? 'movies' : (searchBy === 'tv' ? 'tv series' : 'movies or TV series')}`}
+                    placeholder={`Search for ${type === 'movie' ? 'movies' : (type === 'tv' ? 'tv series' : 'movies or TV series')}`}
                 />
             </div>
         </form>

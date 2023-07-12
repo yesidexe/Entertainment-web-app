@@ -147,6 +147,13 @@ type DetailsType = {
 }
 
 //en uso
+type Credits = {
+    id: number,
+    cast: CastCredits[],
+    crew: CrewCredits[],
+}
+
+//en uso
 type CastCredits = {
     adult: boolean,
     gender: number,
@@ -159,4 +166,19 @@ type CastCredits = {
     character: string,
     credit_id: string,
     order: number,
+}
+
+//en uso
+type CrewCredits = {
+    adult: boolean,
+    gender: number,
+    id: number,
+    known_for_department: string,
+    name: string,
+    original_name: string,
+    popularity: number,
+    profile_path: string,
+    credit_id: string,
+    department: string,
+    job: string
 }

@@ -1,15 +1,14 @@
 import Layout from "../../components/Layout";
-import { useDetails } from "../../hook/useDetails";
+import MovieDetails from "../../components/MovieDetails";
 
 
 function Movie() {
     const currentPath = window.location.pathname
-    let index = currentPath.substring(currentPath.lastIndexOf('/') + 1)    
-    const [details_status, details_data] = useDetails('movie', index)
-    
-    return (        
+    let index = currentPath.substring(currentPath.lastIndexOf('/') + 1)
+
+    return (
         <Layout>
-            <p style={{color: 'white'}}>{details_data?.title} {index}</p>
+            <MovieDetails type={'movie'} index={index} />
         </Layout>
     );
 }

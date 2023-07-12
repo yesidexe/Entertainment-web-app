@@ -6,6 +6,6 @@
     justify-content: space-evenly
 }
 
-.cardsWrapper article:first-of-type{
+.cardsWrapper div:first-of-type{
     grid-column: span 2;
 }

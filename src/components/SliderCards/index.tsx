@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { imagePath } from '../../utils';
 import { HeartIcon, MovieIcon, DeviceTvIcon } from '../Icons';
 import styles from './trendingSliderCards.module.css'
 
@@ -8,13 +10,11 @@ type TypeSliderCards = {
 }
 
 function SliderCards({ type,data,imageType }:TypeSliderCards) {
-    const poster = `${import.meta.env.VITE_IMAGE_API}${data.poster_path}`
-    const backdrop = `${import.meta.env.VITE_IMAGE_API}${data.backdrop_path}`
 
     return (
-        <div className={`keen-slider__slide ${styles.slide}`}>
+        <Link to={`/${type}/${data.id}`} className={`keen-slider__slide ${styles.slide}`}>
             <figure>
-                <img alt={data.title} width={'100%'} height={'100%'} src={imageType==='poster'?poster:backdrop} />
+                <img alt={data.title} width={'100%'} height={'100%'} src={imageType==='poster'?imagePath(data.poster_path):imagePath(data.backdrop_path)} />
             </figure>
             <span className={styles.favWrapper}><HeartIcon strokeWidth={2} className={styles.favIcon} /></span>
             <div className={styles.cardDetails}>
@@ -30,7 +30,7 @@ function SliderCards({ type,data,imageType }:TypeSliderCards) {
                     {data.title ? data.title : data.name}
                 </p>
             </div>
-        </div>
+        </Link>
     );
 }
 

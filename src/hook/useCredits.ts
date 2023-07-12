@@ -8,14 +8,14 @@ const options = {
     }
 };
 
-type Credits = [
+type CreditsType = [
     status: Status,
-    data: CastCredits[],
+    data: Credits,
 ]
 
-export const useCredits = (type:string, id: string): Credits => {
+export const useCredits = (type:string, id: string): CreditsType => {
     const [status, setStatus] = useState<Status>('idle')
-    const [data, setData] = useState<CastCredits[]>([])
+    const [data, setData] = useState<Credits>({ id: 123, cast: [], crew: [] })
 
     const fetchData = async () => {
         try {
@@ -25,7 +25,7 @@ export const useCredits = (type:string, id: string): Credits => {
             if (response.ok) {
                 setStatus('success')
                 const data = await response.json()                
-                setData(data.cast)
+                setData(data)
             } else {
                 setStatus('error')
                 console.error("Algo salió mal")

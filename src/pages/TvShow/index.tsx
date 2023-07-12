@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout"
-import MediaDetails from "../../components/MediaDetails";
+import TvDetails from "../../components/TvDetails";
 
 function TvShow() {
     const currentPath = window.location.pathname
@@ -7,7 +7,7 @@ function TvShow() {
 
     return (
         <Layout>
-                <MediaDetails type={'tv'} index={index}/>
+                <TvDetails type={'tv'} index={index}/>
         </Layout>
     );
 }

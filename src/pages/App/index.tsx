@@ -21,7 +21,8 @@ const AppRoutes = () => {
         { path: '/tv', element: <Tv /> },
         { path: '/tv/:id', element: <TvShow /> },
         { path: '/favorites', element: <Favorites /> },
-        { path: '/genre/:id', element: <Genre /> },        
+        { path: '/movie/genre/:id', element: <Genre /> },        
+        { path: '/tv/genre/:id', element: <Genre /> },    
         { path: '/search-results', element: <SearchResults /> },
         { path: '/*', element: <NotFound /> }
 

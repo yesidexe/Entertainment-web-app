@@ -1,16 +1,18 @@
 import { useCredits } from '../../hook/useCredits'
 import { useDetails } from '../../hook/useDetails'
+import { minAHrs } from '../../utils'
 import CircleProgress from '../CircleProgress'
 import { ChevronRightIcon } from '../Icons'
-import styles from './MediaDetails.module.css'
+import styles from './MovieDetails.module.css'
 
-function MediaDetails({ type, index }) {
+function MovieDetails({ type, index }: { type: string, index: string }) {
     const [details_status, details_data] = useDetails(type, index)
     const [credits_status, credits_data] = useCredits(type, index)
 
     const backdrop = `${import.meta.env.VITE_IMAGE_API}${details_data?.backdrop_path}`
     const poster = `${import.meta.env.VITE_IMAGE_API}${details_data?.poster_path}`
     const ratedPercentage = details_data?.vote_average && Math.floor(details_data.vote_average * 10) / 10
+    const director = credits_data.crew?.find(data => data.job === 'Director')
 
     return (
         <div className={styles.tvShowContainer} >
@@ -25,13 +27,13 @@ function MediaDetails({ type, index }) {
                         {/* Título y generos */}
                         <div className={styles.titleWrapper}>
                             <div className={styles.tvTitle}>
-                                <h2>{details_data?.name}</h2>
-                                <span>({details_data?.first_air_date.substring(0, 4)})</span>
+                                <h2>{details_data?.title}</h2>
+                                <span>({details_data?.release_date.substring(0, 4)})</span>
                             </div>
                             <div className={styles.tvGenres}>
                                 {
                                     details_data?.genres.map((genre) => {
-                                        return <span>{genre.name}</span>
+                                        return <span key={genre.id}>{genre.name}</span>
                                     })
                                 }
                             </div>
@@ -44,16 +46,18 @@ function MediaDetails({ type, index }) {
                                 <span> Ratings </span>
                             </div>
                             {
-                                details_data?.created_by[0]?.name &&
+                                details_data?.runtime &&
                                 <div className={styles.createdBy}>
-                                    <h3>Created by: </h3>
-                                    <span>{details_data.created_by[0].name}</span>
+                                    <span>{minAHrs(details_data.runtime)}</span>
                                 </div>
                             }
-                            <div className={styles.createdBy}>
-                                <h3>Seasons: </h3>
-                                <span>{details_data?.seasons.length}</span>
-                            </div>
+                            {
+                                director &&
+                                <div className={styles.createdBy}>
+                                    <h3>Directed by: </h3>
+                                    <span>{director.name}</span>
+                                </div>
+                            }
                         </div>
 
                         {/* tag line */}
@@ -73,11 +77,11 @@ function MediaDetails({ type, index }) {
                     <h3>Cast</h3>
                     <div className={styles.cast}>
                         {
-                            credits_data.slice(0, 7).map((cast) => {
+                            (credits_data.cast)?.slice(0, 7).map((cast) => {
                                 const profilePath = `${import.meta.env.VITE_IMAGE_API}${cast.profile_path}`
 
                                 return (
-                                    <div className={styles.castDetailsWrapper}>
+                                    <div key={cast.id} className={styles.castDetailsWrapper}>
                                         <figure>
                                             <img height={'100%'} width={'100%'} src={profilePath} alt={cast.name} />
                                         </figure>
@@ -101,4 +105,4 @@ function MediaDetails({ type, index }) {
     )
 }
 
-export default MediaDetails;
+export default MovieDetails;

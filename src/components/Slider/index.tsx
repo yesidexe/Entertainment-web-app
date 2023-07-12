@@ -3,8 +3,8 @@ import { SwiperOptions } from 'swiper/types';
 import 'swiper/css';
 import "swiper/css/free-mode";
 import { FreeMode } from '../../../node_modules/swiper';
-import styles from './trendingSlider.module.css'
 import SliderCards from '../SliderCards';
+import styles from './Slider.module.css'
 
 type SliderProps = {
     type: string,

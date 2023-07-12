@@ -13,7 +13,7 @@ function Movies() {
 
     return (
         <Layout>
-            <Genres type={'movie'}/>
+            <Genres/>
             <div className={styles.movieWrapper}>
                 {/* Now Playing  */}
                 <section className={styles.section}>
