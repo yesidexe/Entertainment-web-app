@@ -12,6 +12,18 @@
 }
 
 .alertContainer p{
+    text-align: center;
     color: #d4d4d4;
     font-size: 20px;
+}
+
+@media (max-width: 640px){
+    .icons{
+        width: 40px;
+        height: 40px;
+    }
+
+    .alertContainer p{
+        font-size: 16px;
+    }
 }

@@ -5,12 +5,12 @@
 .cardWrapper figure{
     position: relative;
     cursor: pointer;
-    overflow: hidden;
+    overflow: hidden;    
     filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 }
 
 .cardWrapper img{
-    object-fit: cover;     
+    object-fit: cover;   
 }
 
 .cardWrapper figure:hover img{
@@ -30,7 +30,7 @@
     display: flex;
     justify-content: space-between;
     color: #a3a3a3;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 .cardDetails div span{
@@ -45,13 +45,13 @@
 
 .cardTitle{
     color:#a3a3a3;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 500;
 }
 
 .icons{
-    width: 26px;
-    height: 26px;
+    width: 16px;
+    height: 16px;
     color: #dc2626;
 }
 
@@ -89,3 +89,43 @@
 a{
     text-decoration: none;
 }
+
+@media (max-width: 640px){
+    .favWrapper{
+        top: 5px;
+        right: 5px;
+    }
+
+    .circleWrapper{
+        bottom: 5px;
+        left: 5px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cardDetails div{
+        font-size: 18px;
+    }
+
+    .cardTitle{
+        font-size: 20px;
+    }
+
+    .icons{
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (min-width:1024px){
+    .cardWrapper img{
+        height: 180px;   
+    }
+}
+
+@media (min-width:1280px){
+    .cardWrapper img{
+        height: 230px;   
+    }
+}
+

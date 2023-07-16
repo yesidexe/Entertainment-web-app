@@ -12,9 +12,10 @@
 }
 
 .gnreLi a{
+    font-size: 14px;
     display: grid;
     place-content: center;
-    padding: 6px 12px;
+    padding: 4px 10px;
     border-radius: 6px;    
     background-color: #171717;
     text-decoration: none;
@@ -26,3 +27,4 @@
     color: #e5e5e5;
     background-color: #09090b;
 }
+

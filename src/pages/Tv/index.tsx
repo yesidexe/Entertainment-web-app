@@ -14,7 +14,7 @@ function Tv() {
 
     return (
         <Layout>
-            <Genres type={'tv'}/>
+            <Genres/>
             <div className={styles.movieWrapper}>
                 {/* Airing today  */}
                 <section className={styles.section}>
@@ -23,7 +23,7 @@ function Tv() {
                         <PlayerPlayIcon strokeWidth={2} className={styles.icon}/>
                     </span>
                     <div className={styles.subSectionWrapper}>
-                        <Slider type={'tv'} data={airingToday_data} imageType={'backdrop'} slidesPerView={3.5}/>
+                        <Slider type={'tv'} data={airingToday_data} imageType={'backdrop'} slidesPerView={1}/>
                     </div>                    
                 </section>
 
@@ -34,7 +34,7 @@ function Tv() {
                         <CircleArrowUpIcon strokeWidth={2} className={styles.icon}/>
                     </span>
                     <div className={styles.subSectionWrapper}>
-                        <Slider type={'tv'} data={onTheAir_data} imageType={'backdrop'} slidesPerView={3.5}/>
+                        <Slider type={'tv'} data={onTheAir_data} imageType={'backdrop'} slidesPerView={1}/>
                     </div>                    
                 </section>
 
@@ -45,7 +45,7 @@ function Tv() {
                         <StarIcon strokeWidth={2} className={styles.icon}/>
                     </span>
                     <div className={styles.subSectionWrapper}>
-                        <Slider type={'tv'} data={popular_data} imageType={'backdrop'} slidesPerView={3.5}/>
+                        <Slider type={'tv'} data={popular_data} imageType={'backdrop'} slidesPerView={1}/>
                     </div>                    
                 </section>
 
@@ -56,7 +56,7 @@ function Tv() {
                         <AlarmIcon strokeWidth={2} className={styles.icon}/>
                     </span>
                     <div className={styles.subSectionWrapper}>
-                        <Slider type={'tv'} data={topRated_data} imageType={'backdrop'} slidesPerView={3.5}/>
+                        <Slider type={'tv'} data={topRated_data} imageType={'backdrop'} slidesPerView={1}/>
                     </div>                    
                 </section>
             </div>

@@ -16,19 +16,19 @@ function Home() {
         <Layout>
             <div className={styles.home}>
                 {/*Trending Movies*/}
-                <section className={styles.section}>
-                    <span>
+                <section className={styles.trendingSection}>
+                    <span className={styles.sectionTitle}>
                         <h2 className={styles.h2Title}>Trending Movies</h2>
                         <FlameIcon strokeWidth={2} className={styles.icon} />
                     </span>
                     <div className={styles.trendingWrapper}>
-                        <Slider type={'movie'} data={trendingMovie_data} imageType={'poster'} slidesPerView={4.5} />
+                        <Slider type={'movie'} data={trendingMovie_data} imageType={'poster'} slidesPerView={1}/>
                     </div>
                 </section>
 
                 {/* Top rated movies */}
-                <section className={styles.section}>
-                    <span>
+                <section className={styles.ratedSection}>
+                    <span className={styles.sectionTitle}>
                         <h2 className={styles.h2Title}>Top Rated Movies</h2>
                         <StarIcon strokeWidth={2} className={styles.icon} />
                     </span>
@@ -36,19 +36,19 @@ function Home() {
                 </section>
 
                 {/* Trending TvShows  */}
-                <section className={styles.section}>
-                    <span>
+                <section className={styles.trendingSection}>
+                    <span className={styles.sectionTitle}>
                         <h2 className={styles.h2Title}>Trending Tv Shows</h2>
                         <FlameIcon strokeWidth={2} className={styles.icon} />
                     </span>
                     <div className={styles.trendingWrapper}>
-                        <Slider type={'tv'} data={trendingTv_data} imageType={'poster'} slidesPerView={4.5} />
+                        <Slider type={'tv'} data={trendingTv_data} imageType={'poster'} slidesPerView={1} />
                     </div>
                 </section>
 
                 {/* Top rated tv shows */}
-                <section className={styles.section}>
-                    <span>
+                <section className={styles.ratedSection}>
+                    <span className={styles.sectionTitle}>
                         <h2 className={styles.h2Title}>Top Rated Tv Shows</h2>
                         <StarIcon strokeWidth={2} className={styles.icon} />
                     </span>

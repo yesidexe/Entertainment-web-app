@@ -23,13 +23,13 @@ function SearchBar() {
 
     return (
         <form onSubmit={handleSubmit} className={styles.formWrapper}>
-            <SearchIcon />
+            <SearchIcon className={styles.icons} strokeWidth={1.5} />
             <div className={styles.inputSearch}>
                 <input
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     type="text"
-                    placeholder={`Search for ${type === 'movie' ? 'movies' : (type === 'tv' ? 'tv series' : 'movies or TV series')}`}
+                    placeholder={`Search for ${type === 'movie' ? 'Movies' : (type === 'tv' ? 'Tv series' : 'Movie or TV')}`}
                 />
             </div>
         </form>

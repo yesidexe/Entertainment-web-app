@@ -27,3 +27,14 @@
     font-weight: 400;
     color: #d4d4d4;
 }
+
+@media (max-width: 768px){
+    .h2Title {
+        font-size: 20px;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}

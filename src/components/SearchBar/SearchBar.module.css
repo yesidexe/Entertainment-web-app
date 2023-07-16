@@ -1,5 +1,5 @@
 .formWrapper {
-    margin-top: 40px;
+    margin: 40px auto auto auto;
     display: flex;
     align-items: center;
     gap: 14px;
@@ -11,7 +11,6 @@
     display: inline-block;
     background-color: transparent;
     border: none;
-    width: 500px;
     outline: none;
     padding: 8px 6px;   
     font-size: 20px;   
@@ -36,6 +35,14 @@
     width: 100%;
 }
 
-/*.inputSearch:focus{
-    border-bottom: solid 1px #3c1e57;
-}*/
+.icons{
+    color: #a3a3a3;
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 768px){
+    .inputSearch input{
+        font-size: 16px;   
+    }
+}

@@ -10,7 +10,7 @@ function Cards({ type, data }: { type: string, data: ResultsLists | SearchResult
         <div className={styles.cardWrapper}>
             <Link to={`/${type}/${data.id}`}>
                 <figure>
-                    <img alt={data.original_title} width={'100%'} height={260} src={imagePath(data.backdrop_path)} />
+                    <img alt={data.original_title} width={'100%'} height={'100%'} src={imagePath(data.backdrop_path)} />
                     <span className={styles.favWrapper}><HeartIcon strokeWidth={2} className={styles.favIcon} /></span>
                     {
                         data.vote_average > 0 &&

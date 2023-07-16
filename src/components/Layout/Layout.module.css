@@ -7,8 +7,26 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 60px 0;
-    width: 1280px;
+    padding: 60px 0;    
+    width: 80%;
     margin: auto;
+}
 
+@media (min-width: 768px) {
+    .bodyWrapper{
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bodyWrapper{
+        width: 80%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .bodyWrapper{
+        padding: 60px 20px;
+        width: 1280px;
+    }
 }

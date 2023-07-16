@@ -3,12 +3,12 @@
     cursor: pointer;
 }
 
-.slide figure{     
+.slide figure {
     overflow: hidden;
 }
 
 .slide figure img {
-    object-fit: cover;   
+    object-fit: cover;
 }
 
 .slide:hover figure img {
@@ -57,13 +57,13 @@
     font-size: 18px;
 }
 
-.cardDetails p::first-letter{
+.cardDetails p::first-letter {
     text-transform: uppercase;
 }
 
 .cardTitle {
     color: #fafafa;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -72,3 +72,4 @@
     height: 20px;
     color: #fafafa;
 }
+

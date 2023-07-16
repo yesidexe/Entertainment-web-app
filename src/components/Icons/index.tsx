@@ -117,14 +117,10 @@ export const HeartIcon = ({ ...iconProps }: Props) => {
     )
 }
 
-export const SearchIcon = () => {
+export const SearchIcon = ({ ...iconProps }: Props) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg"
-            style={{
-                width: "25px",
-                height: "25px",
-                color: "#a3a3a3",
-            }}
+            {...iconProps}
             viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
