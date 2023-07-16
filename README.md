@@ -23,7 +23,7 @@ Este proyecto lo hice basandome en el reto de [Frontend Mentor](https://www.fron
 
 - [ ]  Responsive layout (mobile/tablet/desktop)
 - [ ]  Login/Register
-- [x]  Buscar Series/Peliculas
+- [x]  Buscar Series/Peliculas, categorias
 - [ ]  Agregar a favoritos
 
 ## Imagen del proyecto
