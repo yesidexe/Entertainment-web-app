@@ -13,17 +13,17 @@ Este proyecto lo hice basandome en el reto de [Frontend Mentor](https://www.fron
 
 - [React](https://react.dev/)
 - [Tabler Icons](https://tabler-icons.io/)
-- [keen slider](https://keen-slider.io/)
+- [Swiper Js](https://swiperjs.com/) (Para el slider)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Router](https://reactrouter.com/en/main)
 - [Vitejs](https://vitejs.dev/) (con Css-modules)
-- [OMDB Api](https://omdbapi.com/)
+- [TMDB Api](https://developer.themoviedb.org/docs)
 
 ## Caracteristicas
 
 - [ ]  Responsive layout (mobile/tablet/desktop)
 - [ ]  Login/Register
-- [ ]  Buscar Series/Peliculas
+- [x]  Buscar Series/Peliculas
 - [ ]  Agregar a favoritos
 
 ## Imagen del proyecto
