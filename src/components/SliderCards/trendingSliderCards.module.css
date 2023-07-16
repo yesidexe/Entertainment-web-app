@@ -1,12 +1,14 @@
 .slide {
     position: relative;
     cursor: pointer;
+}
+
+.slide figure{     
     overflow: hidden;
 }
 
 .slide figure img {
-    object-fit: cover;
-    
+    object-fit: cover;   
 }
 
 .slide:hover figure img {

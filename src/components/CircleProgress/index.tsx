@@ -1,6 +1,7 @@
 import styles from './CircleProgress.module.css'
 
 export function CircleProgress({percentage}:{percentage:number}) {
+
     const radius = 20;
     const circleWidht = 44;
     const dashArray = radius * Math.PI * 2;

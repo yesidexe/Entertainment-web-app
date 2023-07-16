@@ -26,7 +26,8 @@ export const useDiscover = (type:string, gnre:string): Props => {
             if (response.ok) {
                 setStatus('success')
                 const data = await response.json()
-                setData(data.results)
+                const filterData = (data.results).filter((i:DiscoverMovies) => i.backdrop_path !== undefined && i.backdrop_path !== null )
+                setData(filterData)
             } else {
                 setStatus('error')
                 console.error("Algo salió mal")

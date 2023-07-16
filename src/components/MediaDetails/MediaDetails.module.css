@@ -37,20 +37,15 @@
 }
 
 .tvTitle {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.tvTitle h2 {
     color: #d4d4d4;
     font-size: 38px;
     font-weight: 400;
 }
 
 .tvTitle span {
+    margin-left: 12px;
     color: #a3a3a3;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 300;
 }
 
@@ -59,7 +54,8 @@
     flex-direction: column;
 }
 
-.tvGenres span {
+.tvGenres a {
+    text-decoration: none;
     background-color: #171717;
     padding: 4px 8px;
     margin-right: 12px;
@@ -108,71 +104,4 @@
     color: #d4d4d4;
     font-size: 16px;
     font-weight: 400;
-}
-
-.castWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    align-items: center;
-}
-
-.castWrapper h3{
-    color: #d4d4d4;
-    font-size: 28px;
-    font-weight: 400;
-}
-
-.cast{
-    display: flex;
-    gap: 4px;
-}
-
-.castDetailsWrapper {
-    width: 160px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 6px;
-    
-}
-
-.castDetailsWrapper figure{
-    width: 100px;
-    height: 150px;
-    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
-
-}
-
-.castDetailsWrapper figure img {
-    object-fit: cover;    
-    border-radius: 4px;
-}
-
-.castDetails {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.castDetails p:first-of-type {
-    color: #d4d4d4;
-    font-size: 14px;
-}
-
-.castDetails p:last-of-type {
-    color: #737373;
-    font-size: 14px;
-}
-
-.seeMore{
-    font-size: 14px;
-    cursor: pointer;
-    color: #d4d4d4;
-    display: flex;
-    align-items: center;
-}
-
-.icons{
-    width: 16px;
 }
