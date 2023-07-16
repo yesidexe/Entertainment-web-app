@@ -16,7 +16,7 @@ function MediaDetails({ data, director }: { data: DetailsType | null, director: 
         <section className={styles.tvDetails} >
             {
                 data?.poster_path &&
-                <img className={styles.tvPoster} width={300} height={'100%'} src={imagePath(data.poster_path)} />
+                <img className={styles.tvPoster} height={'420px'} src={imagePath(data.poster_path)} />
             }
             <div className={styles.detailsWrapper}>
                 {/* Título y generos */}

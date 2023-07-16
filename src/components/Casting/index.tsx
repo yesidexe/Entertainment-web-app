@@ -18,10 +18,9 @@ function Casting({ data }: { data: Credits }) {
                             <div key={cast.id} className={styles.castDetailsWrapper}>
                                 {
                                     cast.profile_path ?
-                                        <figure>
-                                            <img height={'100%'} width={'100%'} src={profilePath} alt={cast.name} />
-                                        </figure> :
-                                        <NoImage />
+                                        <img width={'100px'} height={'150px'} src={profilePath} alt={cast.name} />
+                                        : <NoImage />
+
                                 }
                                 <div className={styles.castDetails}>
                                     <p>{cast.name}</p>
@@ -35,7 +34,7 @@ function Casting({ data }: { data: Credits }) {
                     (data.cast)?.length > 7 &&
                     <span className={styles.seeMore}>
                         See more
-                        <span><ChevronRightIcon strokeWidth={1.5} className={styles.icons}/></span>
+                        <span><ChevronRightIcon strokeWidth={1.5} className={styles.icons} /></span>
                     </span>
                 }
             </div>

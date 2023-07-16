@@ -1,10 +1,10 @@
-.SearchResultsWrapper{
+.SearchResultsWrapper {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.resultsFor{
+.resultsFor {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -12,19 +12,41 @@
     color: #525252;
 }
 
-.resultsFor a{
+.resultsFor a {
     text-decoration: none;
 }
 
-.results{
+.results {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 40px 30px;
 }
 
-.icon{
+.icon {
     color: #dc2626;
     width: 30px;
     height: 30px;
     cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .results {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .resultsFor {
+        gap: 12px;
+        font-size: 18px;
+    }
+
+    .results {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }

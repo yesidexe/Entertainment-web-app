@@ -28,3 +28,25 @@
     height: 30px;
     cursor: pointer;
 }
+
+@media (max-width: 768px){
+    .results {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .resultsFor {
+        gap: 12px;
+        font-size: 18px;
+    }
+
+    .results {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
