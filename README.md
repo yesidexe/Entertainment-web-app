@@ -25,6 +25,7 @@ Este proyecto lo hice basandome en el reto de [Frontend Mentor](https://www.fron
 - [ ]  Login/Register
 - [x]  Buscar Series/Peliculas, categorias
 - [ ]  Agregar a favoritos
+- [ ]  Optimizarlo con herramientas que ofrece react (aún anda lentico)
 
 ## Imagen del proyecto
 
