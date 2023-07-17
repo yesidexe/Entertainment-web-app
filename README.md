@@ -6,7 +6,7 @@ Este proyecto lo hice basandome en el reto de [Frontend Mentor](https://www.fron
 
 ## Live demo
 
-> Cuando lo tenga lo pongo
+> [Tiene sus cositas para mejorar](https://euphonious-chaja-5dcb0d.netlify.app/) (no sé porqué al recargar en una ruta netlify da error, tendré que solucionar eso)
 > 
 
 ## **Tecnologias/recursos**
