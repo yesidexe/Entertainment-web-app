@@ -1,4 +1,4 @@
-import { CircleArrowUpIcon, FlameIcon, StarIcon } from "../../components/Icons";
+import { FlameIcon, StarIcon } from "../../components/Icons";
 import CardsContainer from '../../components/CardsContainer';
 import Slider from '../../components/Slider';
 import Layout from "../../components/Layout";
@@ -22,7 +22,10 @@ function Home() {
                         <FlameIcon strokeWidth={2} className={styles.icon} />
                     </span>
                     <div className={styles.trendingWrapper}>
-                        <Slider type={'movie'} data={trendingMovie_data} imageType={'poster'} slidesPerView={1}/>
+                        {
+                            trendingMovie_status === 'success' &&
+                            <Slider type={'movie'} data={trendingMovie_data} imageType={'poster'} slidesPerView={1}/>
+                        }                        
                     </div>
                 </section>
 
@@ -42,7 +45,10 @@ function Home() {
                         <FlameIcon strokeWidth={2} className={styles.icon} />
                     </span>
                     <div className={styles.trendingWrapper}>
-                        <Slider type={'tv'} data={trendingTv_data} imageType={'poster'} slidesPerView={1} />
+                        {
+                            trendingTv_status === 'success' &&
+                            <Slider type={'tv'} data={trendingTv_data} imageType={'poster'} slidesPerView={1} />
+                        }
                     </div>
                 </section>
 

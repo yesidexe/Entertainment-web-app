@@ -22,7 +22,10 @@ function Movies() {
                         <PlayerPlayIcon strokeWidth={2} className={styles.icon}/>
                     </span>
                     <div className={styles.subSectionWrapper}>
-                        <Slider type={'movie'} data={nowPlaying_data} imageType={'backdrop'} slidesPerView={1}/>
+                        {
+                            nowPlaying_status === 'success' &&
+                            <Slider type={'movie'} data={nowPlaying_data} imageType={'backdrop'} slidesPerView={1}/>
+                        }                        
                     </div>                    
                 </section>
                 {/*Popular*/}
@@ -32,7 +35,10 @@ function Movies() {
                         <CircleArrowUpIcon strokeWidth={2} className={styles.icon}/>
                     </span>
                     <div className={styles.subSectionWrapper}>
-                        <Slider type={'movie'} data={popular_data} imageType={'backdrop'} slidesPerView={1}/>
+                        {
+                            popular_status === 'success' &&
+                            <Slider type={'movie'} data={popular_data} imageType={'backdrop'} slidesPerView={1}/>
+                        }                        
                     </div>                    
                 </section>
                 {/* Top Rated */}
@@ -42,7 +48,10 @@ function Movies() {
                         <StarIcon strokeWidth={2} className={styles.icon}/>
                     </span>
                     <div className={styles.subSectionWrapper}>
-                        <Slider type={'movie'} data={topRated_data} imageType={'backdrop'} slidesPerView={1}/>
+                        {
+                            topRated_status === 'success' &&
+                            <Slider type={'movie'} data={topRated_data} imageType={'backdrop'} slidesPerView={1}/>
+                        }                        
                     </div>                    
                 </section>
                 {/* UpComning */}
@@ -52,7 +61,10 @@ function Movies() {
                         <AlarmIcon strokeWidth={2} className={styles.icon}/>
                     </span>
                     <div className={styles.subSectionWrapper}>
-                        <Slider type={'movie'} data={upcoming_data} imageType={'backdrop'} slidesPerView={1}/>
+                        {
+                            upcoming_status === 'success' &&
+                            <Slider type={'movie'} data={upcoming_data} imageType={'backdrop'} slidesPerView={1}/>
+                        }                        
                     </div>                    
                 </section>
             </div>

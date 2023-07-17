@@ -19,16 +19,21 @@ function Movie() {
 
     return (
         <Layout>
-            <div className={styles.tvShowContainer} >
-                {
-                    details_data?.poster_path &&
-                    <img width={'100%'} height={'100%'} src={imagePath(details_data.backdrop_path)} className={styles.backdrop} />
-                }
-                <div className={styles.tvShowWrapper} >
-                    <MediaDetails data={details_data} director={director} />
-                    <Casting data={credits_data} />
+            {   details_status === 'success' &&
+                <div className={styles.tvShowContainer} >
+                    {
+                        details_data?.poster_path &&
+                        <img width={'100%'} height={'100%'} src={imagePath(details_data.backdrop_path)} className={styles.backdrop} />
+                    }
+                    <div className={styles.tvShowWrapper} >
+                        <MediaDetails data={details_data} director={director} />
+                        {
+                            credits_status === 'success' &&
+                            <Casting data={credits_data} />
+                        }
+                    </div >
                 </div >
-            </div >
+            }
         </Layout>
     );
 }
