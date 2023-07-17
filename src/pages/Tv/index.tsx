@@ -25,7 +25,21 @@ function Tv() {
                     <div className={styles.subSectionWrapper}>
                         {
                             airingToday_status === 'success' &&
-                            <Slider type={'tv'} data={airingToday_data} imageType={'backdrop'} slidesPerView={1} />
+                            <Slider type={'tv'} data={airingToday_data} imageType={'backdrop'} slidesPerView={1} 
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 1.5,
+                                    spaceBetween: 10,
+                                },
+                                768: {
+                                    slidesPerView: 2.5,
+                                    spaceBetween: 20,
+                                },
+                                1024: {
+                                    slidesPerView: 3.5,
+                                    spaceBetween: 30,
+                                }
+                            }}/>
                         }
                     </div>
                 </section>
@@ -39,7 +53,21 @@ function Tv() {
                     <div className={styles.subSectionWrapper}>
                         {
                             onTheAir_status === 'success' &&
-                            <Slider type={'tv'} data={onTheAir_data} imageType={'backdrop'} slidesPerView={1} />
+                            <Slider type={'tv'} data={onTheAir_data} imageType={'backdrop'} slidesPerView={1}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 1.5,
+                                    spaceBetween: 10,
+                                },
+                                768: {
+                                    slidesPerView: 2.5,
+                                    spaceBetween: 20,
+                                },
+                                1024: {
+                                    slidesPerView: 3.5,
+                                    spaceBetween: 30,
+                                }
+                            }}/>
                         }                        
                     </div>
                 </section>
@@ -53,7 +81,21 @@ function Tv() {
                     <div className={styles.subSectionWrapper}>
                         {
                             popular_status === 'success' &&
-                            <Slider type={'tv'} data={popular_data} imageType={'backdrop'} slidesPerView={1} />
+                            <Slider type={'tv'} data={popular_data} imageType={'backdrop'} slidesPerView={1}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 1.5,
+                                    spaceBetween: 10,
+                                },
+                                768: {
+                                    slidesPerView: 2.5,
+                                    spaceBetween: 20,
+                                },
+                                1024: {
+                                    slidesPerView: 3.5,
+                                    spaceBetween: 30,
+                                }
+                            }}/>
                         }                        
                     </div>
                 </section>
@@ -67,7 +109,21 @@ function Tv() {
                     <div className={styles.subSectionWrapper}>
                         {
                             topRated_status === 'success' &&
-                            <Slider type={'tv'} data={topRated_data} imageType={'backdrop'} slidesPerView={1} />
+                            <Slider type={'tv'} data={topRated_data} imageType={'backdrop'} slidesPerView={1}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 1.5,
+                                    spaceBetween: 10,
+                                },
+                                768: {
+                                    slidesPerView: 2.5,
+                                    spaceBetween: 20,
+                                },
+                                1024: {
+                                    slidesPerView: 3.5,
+                                    spaceBetween: 30,
+                                }
+                            }}/>
                         }                        
                     </div>
                 </section>
