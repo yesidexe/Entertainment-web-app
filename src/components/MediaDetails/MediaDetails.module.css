@@ -9,6 +9,7 @@
 
 .tvPoster{
     filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+    object-fit: cover;
 }
 
 .backdrop {

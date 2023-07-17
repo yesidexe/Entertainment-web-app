@@ -18,7 +18,7 @@ function Casting({ data }: { data: Credits }) {
                             <div key={cast.id} className={styles.castDetailsWrapper}>
                                 {
                                     cast.profile_path ?
-                                        <img width={'100px'} height={'150px'} src={profilePath} alt={cast.name} />
+                                        <img width={'80px'} height={'130px'} src={profilePath} alt={cast.name} />
                                         : <NoImage />
 
                                 }
