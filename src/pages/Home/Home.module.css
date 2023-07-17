@@ -53,10 +53,3 @@
         height: 20px;
     }
 }
-
-@media (max-width: 640px){
-    .trendingWrapper {
-        margin: auto;
-        width: 80%;
-    }
-}
