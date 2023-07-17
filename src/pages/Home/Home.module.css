@@ -36,7 +36,7 @@
     height: 26px;
 }
 
-.trendingWrapper {   
+.trendingWrapper {
     overflow: hidden;
     background: rgb(38, 38, 38);
     background: radial-gradient(circle, rgba(38, 38, 38, 1) 0%, rgba(10, 10, 10, 1) 20%);

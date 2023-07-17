@@ -24,7 +24,21 @@ function Home() {
                     <div className={styles.trendingWrapper}>
                         {
                             trendingMovie_status === 'success' &&
-                            <Slider type={'movie'} data={trendingMovie_data} imageType={'poster'} slidesPerView={1}/>
+                            <Slider type={'movie'} data={trendingMovie_data} imageType={'poster'} slidesPerView={1}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 2.5,
+                                    spaceBetween: 10,
+                                },
+                                768: {
+                                    slidesPerView: 3.5,
+                                    spaceBetween: 20,
+                                },
+                                1024: {
+                                    slidesPerView: 4.5,
+                                    spaceBetween: 30,
+                                }
+                            }}/>
                         }                        
                     </div>
                 </section>
@@ -47,7 +61,21 @@ function Home() {
                     <div className={styles.trendingWrapper}>
                         {
                             trendingTv_status === 'success' &&
-                            <Slider type={'tv'} data={trendingTv_data} imageType={'poster'} slidesPerView={1} />
+                            <Slider type={'tv'} data={trendingTv_data} imageType={'poster'} slidesPerView={1} 
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 2.5,
+                                    spaceBetween: 10,
+                                },
+                                768: {
+                                    slidesPerView: 3.5,
+                                    spaceBetween: 20,
+                                },
+                                1024: {
+                                    slidesPerView: 4.5,
+                                    spaceBetween: 30,
+                                }
+                            }}/>
                         }
                     </div>
                 </section>
