@@ -1,7 +1,6 @@
 
 export function imagePath(data:string | undefined){
-    const image = `${VITE_IMAGE_API}${data}`
-    //const image = `${import.meta.env.VITE_IMAGE_API}${data}`
+    const image = `${import.meta.env.VITE_IMAGE_API}${data}`
     return image;
 }
 

@@ -4,8 +4,7 @@ const options = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: `Bearer ${VITE_TOKEN_API}`
-        //Authorization: `Bearer ${import.meta.env.VITE_TOKEN_API}`
+        Authorization: `Bearer ${import.meta.env.VITE_TOKEN_API}`
     }
 };
 
