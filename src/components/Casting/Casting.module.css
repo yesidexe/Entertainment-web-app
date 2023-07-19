@@ -16,7 +16,7 @@
 .cast{
     width: 100%;
     display: flex;
-    gap: 20px 14px;
+    gap: 20px 12px;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }

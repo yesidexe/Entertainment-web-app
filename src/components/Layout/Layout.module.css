@@ -8,19 +8,19 @@
     flex-direction: column;
     gap: 40px;
     padding: 60px 0;    
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
 @media (min-width: 768px) {
     .bodyWrapper{
-        width: 80%;
+        width: 90%;
     }
 }
 
 @media (min-width: 1024px) {
     .bodyWrapper{
-        width: 80%;
+        width: 90%;
     }
 }
 
