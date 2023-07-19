@@ -30,14 +30,14 @@ function Casting({ data }: { data: Credits }) {
                         )
                     })
                 }
-                {
-                    (data.cast)?.length > 7 &&
-                    <span className={styles.seeMore}>
-                        See more
-                        <span><ChevronRightIcon strokeWidth={1.5} className={styles.icons} /></span>
-                    </span>
-                }
             </div>
+            {
+                (data.cast)?.length > 7 &&
+                <span className={styles.seeMore}>
+                    See more
+                    <span><ChevronRightIcon strokeWidth={1.5} className={styles.icons} /></span>
+                </span>
+            }
         </section >
     );
 }
