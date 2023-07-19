@@ -21,7 +21,7 @@ Este proyecto lo hice basandome en el reto de [Frontend Mentor](https://www.fron
 
 ## Caracteristicas
 
-- [ ]  Responsive layout (mobile/tablet/desktop)
+- [x]  Responsive layout (mobile/tablet/desktop)
 - [ ]  Login/Register
 - [x]  Buscar Series/Peliculas, categorias
 - [ ]  Agregar a favoritos
