@@ -1,0 +1,43 @@
+.skeleton{
+    background-color: #171717;
+    margin: 0.75rem 0;
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes pulse{
+    50%{
+        opacity: .5;
+    }
+}
+
+.animate-pulse{
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/*Slider*/
+.slider{
+    width: 100%;    
+    height: 378px;
+    aspect-ratio: 377 / 100; /* Aspect ratio: 377:100 */
+}
+
+
+@media (max-width: 1280px){
+    .slider{
+        height: 348px;
+    }
+}
+
+@media (max-width: 1024px){
+    .slider{
+        height: 373px;
+    }
+}
+
+@media (max-width: 640px){
+    .slider{
+        height: 862px;
+    }
+}

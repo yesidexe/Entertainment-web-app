@@ -18,15 +18,14 @@ export const useTrendingFetch = (type:string):Trending => {
     const [data, setData] = useState<TrendingType[]>([])
 
     const fetchData = async () => {
-        try {
-            setStatus('loading')
-            const response = await
-            
+        setStatus('loading')
+        try {            
+            const response = await            
                 fetch(`https://api.themoviedb.org/3/trending/${type}/day?language=en`, options)
-            if (response.ok) {
-                setStatus('success')
+            if (response.ok) {                
                 const data = await response.json()
                 setData(data.results)
+                setStatus('success')
             } else {
                 setStatus('error')
                 console.error("Algo salió mal")

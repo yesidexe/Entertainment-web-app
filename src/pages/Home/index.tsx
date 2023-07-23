@@ -5,12 +5,13 @@ import Layout from "../../components/Layout";
 
 import styles from './Home.module.css'
 import { useTrendingFetch } from "../../hook/useTrendingFetch";
+import SkeletonSlider from "../../components/skeletons/SkeletonSlider";
 
 
 
 function Home() {
-    const [trendingMovie_status, trendingMovie_data] = useTrendingFetch('movie') 
-    const [trendingTv_status, trendingTv_data] = useTrendingFetch('tv') 
+    const [trendingMovie_status, trendingMovie_data] = useTrendingFetch('movie')
+    const [trendingTv_status, trendingTv_data] = useTrendingFetch('tv')
 
     return (
         <Layout>
@@ -23,24 +24,30 @@ function Home() {
                     </span>
                     <div className={styles.trendingWrapper}>
                         {
+                            trendingMovie_status === 'loading' &&
+                            <SkeletonSlider />
+                        }
+                        {
                             trendingMovie_status === 'success' &&
+
                             <Slider type={'movie'} data={trendingMovie_data} imageType={'poster'} slidesPerView={1}
-                            breakpoints={{
-                                640: {
-                                    slidesPerView: 2.5,
-                                    spaceBetween: 10,
-                                },
-                                768: {
-                                    slidesPerView: 3.5,
-                                    spaceBetween: 20,
-                                },
-                                1024: {
-                                    slidesPerView: 4.5,
-                                    spaceBetween: 30,
-                                }
-                            }}/>
-                        }                        
+                                breakpoints={{
+                                    640: {
+                                        slidesPerView: 2.5,
+                                        spaceBetween: 10,
+                                    },
+                                    768: {
+                                        slidesPerView: 3.5,
+                                        spaceBetween: 20,
+                                    },
+                                    1024: {
+                                        slidesPerView: 4.5,
+                                        spaceBetween: 30,
+                                    }
+                                }} />
+                        }
                     </div>
+
                 </section>
 
                 {/* Top rated movies */}
@@ -61,21 +68,21 @@ function Home() {
                     <div className={styles.trendingWrapper}>
                         {
                             trendingTv_status === 'success' &&
-                            <Slider type={'tv'} data={trendingTv_data} imageType={'poster'} slidesPerView={1} 
-                            breakpoints={{
-                                640: {
-                                    slidesPerView: 2.5,
-                                    spaceBetween: 10,
-                                },
-                                768: {
-                                    slidesPerView: 3.5,
-                                    spaceBetween: 20,
-                                },
-                                1024: {
-                                    slidesPerView: 4.5,
-                                    spaceBetween: 30,
-                                }
-                            }}/>
+                            <Slider type={'tv'} data={trendingTv_data} imageType={'poster'} slidesPerView={1}
+                                breakpoints={{
+                                    640: {
+                                        slidesPerView: 2.5,
+                                        spaceBetween: 10,
+                                    },
+                                    768: {
+                                        slidesPerView: 3.5,
+                                        spaceBetween: 20,
+                                    },
+                                    1024: {
+                                        slidesPerView: 4.5,
+                                        spaceBetween: 30,
+                                    }
+                                }} />
                         }
                     </div>
                 </section>
