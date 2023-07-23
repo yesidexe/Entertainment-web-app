@@ -1,5 +1,6 @@
 import { useLists } from '../../hook/useLists';
 import Cards from '../Cards';
+import SkeletonTopRated from '../skeletons/SkeletonTopRated';
 import styles from './CardsContainer.module.css'
 
 function CardsContainer({ type, lists }: { type: string, lists: string }) {
@@ -8,6 +9,12 @@ function CardsContainer({ type, lists }: { type: string, lists: string }) {
     return (
 
         <div className={styles.cardsWrapper}>
+            {
+                list_status === 'loading' &&
+                Array(5).fill(null).map((_,index) =>{
+                    return <SkeletonTopRated key={index}/>
+                })  
+            }
             {
                 list_status === 'success' &&
                 list_data.slice(0, 5).map((data) => {

@@ -18,17 +18,17 @@ export const useLists = (type:string, lists: string): MovieLists => {
     const [data, setData] = useState<ResultsLists[]>([])
 
     const fetchData = async () => {
-        try {
-            setStatus('loading')
+        setStatus('loading')
+        try {            
             const response = await 
             fetch(`https://api.themoviedb.org/3/${type}/${lists}?language=en&page=1`, options)
-            if (response.ok) {
-                setStatus('success')
+            if (response.ok) {                
                 const data = await response.json()
                 const filterData = data.results.filter((result: SearchResults) => {
                     return result.backdrop_path !== undefined && result.backdrop_path !== null
                 })
                 setData(filterData)
+                setStatus('success')
             } else {
                 setStatus('error')
                 console.error("Algo salió mal")

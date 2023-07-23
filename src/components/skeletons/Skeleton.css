@@ -40,3 +40,20 @@
         height: 862px;
     }
 }
+
+/*Top Rated*/
+.card{
+    aspect-ratio: 437.75/313.23;
+}
+
+@media (min-width:1024px){
+    .card{
+        height: 180px;   
+    }
+}
+
+@media (min-width:1280px){
+    .card{
+        height: 230px;   
+    }
+}

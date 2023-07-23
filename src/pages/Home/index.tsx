@@ -67,6 +67,10 @@ function Home() {
                     </span>
                     <div className={styles.trendingWrapper}>
                         {
+                            trendingMovie_status === 'loading' &&
+                            <SkeletonSlider />
+                        }
+                        {
                             trendingTv_status === 'success' &&
                             <Slider type={'tv'} data={trendingTv_data} imageType={'poster'} slidesPerView={1}
                                 breakpoints={{
