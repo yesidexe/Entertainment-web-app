@@ -1,5 +1,4 @@
 import Casting from "../../components/Casting";
-import Layout from "../../components/Layout";
 import MediaDetails from "../../components/MediaDetails";
 import { useCredits } from "../../hook/useCredits";
 import { useDetails } from "../../hook/useDetails";

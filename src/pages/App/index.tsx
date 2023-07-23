@@ -3,15 +3,6 @@
 //estilos
 import { useRoutes, BrowserRouter } from "react-router-dom"
 import { AppProvider } from "../../context"
-/*import Home from "../Home"
-import Movies from "../Movies"
-import Tv from "../Tv"
-import Favorites from "../Favorites"
-import SearchResults from "../SearchResults"
-import Genre from "../Genre"
-import NotFound from "../NotFound"
-import Movie from "../Movie"
-import TvShow from "../TvShow"*/
 import { lazy } from "react"
 import Layout from "../../components/Layout"
 
