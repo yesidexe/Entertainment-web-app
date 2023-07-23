@@ -1,7 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useDiscover } from "../../hook/useDiscover";
 import { AppContext } from "../../context";
-import Layout from "../../components/Layout"
 import { ArrowBackIcon } from "../../components/Icons";
 import { Link, useNavigate } from "react-router-dom";
 import Cards from "../../components/Cards";
@@ -23,7 +22,6 @@ function Genre() {
     }, [actualGnre]);
 
     return (
-        <Layout>
             <div className={styles.SearchResultsWrapper}>
                 <div className={styles.resultsFor}>
                     <Link to={`/${type}`}>
@@ -41,7 +39,6 @@ function Genre() {
                     }
                 </div>
             </div>
-        </Layout>
     );
 }
 

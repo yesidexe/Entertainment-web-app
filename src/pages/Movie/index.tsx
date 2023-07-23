@@ -18,7 +18,7 @@ function Movie() {
     const director = credits_data.crew?.find(data => data.job === 'Director')
 
     return (
-        <Layout>
+        <>
             {   details_status === 'success' &&
                 <div className={styles.tvShowContainer} >
                     {
@@ -28,13 +28,13 @@ function Movie() {
                     <div className={styles.tvShowWrapper} >
                         <MediaDetails data={details_data} director={director} />
                         {
-                            credits_status === 'success' &&
-                            <Casting data={credits_data} />
+                        credits_status === 'success' &&
+                        <Casting data={credits_data} />
                         }
                     </div >
                 </div >
             }
-        </Layout>
+        </>
     );
 }
 

@@ -1,5 +1,4 @@
 import Casting from "../../components/Casting";
-import Layout from "../../components/Layout"
 import MediaDetails from "../../components/MediaDetails";
 import { useCredits } from "../../hook/useCredits";
 import { useDetails } from "../../hook/useDetails";
@@ -15,7 +14,7 @@ function TvShow() {
     const [credits_status, credits_data] = useCredits('tv', index)
 
     return (
-        <Layout>
+        <>
             {
                 details_status === 'success' &&
                 <div className={styles.tvShowContainer} >
@@ -32,7 +31,7 @@ function TvShow() {
                     </div >
                 </div >
             }
-        </Layout>
+        </>
     );
 }
 

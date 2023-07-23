@@ -1,6 +1,5 @@
 import Genres from "../../components/Genres";
 import { AlarmIcon, CircleArrowUpIcon, PlayerPlayIcon, StarIcon } from "../../components/Icons";
-import Layout from "../../components/Layout";
 import Slider from "../../components/Slider";
 import { useLists } from "../../hook/useLists";
 import styles from "./Movies.module.css"
@@ -11,10 +10,9 @@ function Movies() {
     const [topRated_status, topRated_data] = useLists('movie','top_rated')
     const [upcoming_status, upcoming_data] = useLists('movie','upcoming')
 
-    return (
-        <Layout>
-            <Genres/>
+    return (            
             <div className={styles.movieWrapper}>
+                <Genres/>
                 {/* Now Playing  */}
                 <section className={styles.section}>
                     <span>
@@ -123,8 +121,7 @@ function Movies() {
                         }                        
                     </div>                    
                 </section>
-            </div>
-        </Layout>        
+            </div>      
     );
 }
 
