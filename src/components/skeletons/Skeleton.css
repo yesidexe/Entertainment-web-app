@@ -43,17 +43,19 @@
 
 /*Top Rated*/
 .card{
-    aspect-ratio: 309.5/174.09;
+    aspect-ratio: 421.55/237.11;
 }
 
 @media (min-width:1024px){
     .card{
+        aspect-ratio: unset;
         height: 180px;   
     }
 }
 
 @media (min-width:1280px){
-    .card{
+    .card{        
+        aspect-ratio: unset;
         height: 230px;   
     }
 }
