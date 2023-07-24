@@ -3,15 +3,20 @@ import CircleProgress from '../CircleProgress';
 import { HeartIcon, MovieIcon, DeviceTvIcon } from '../Icons';
 import { imagePath } from '../../utils'
 import styles from './cards.module.css'
+import { MouseEvent } from 'react';
 
 function Cards({ type, data }: { type: string, data: ResultsLists | SearchResults | DiscoverMovies }) {
     
+    const handleClick = (e:MouseEvent<HTMLSpanElement>)=>{
+        e.preventDefault();
+    }
+
     return (
         <div className={styles.cardWrapper}>
             <Link to={`/${type}/${data.id}`}>
                 <figure>
                     <img alt={data.original_title} width={'100%'} height={'100%'} src={imagePath(data.backdrop_path)} />
-                    <span className={styles.favWrapper}><HeartIcon strokeWidth={2} className={styles.favIcon} /></span>
+                    <span onClick={(e)=>handleClick(e)} className={styles.favWrapper}><HeartIcon strokeWidth={2} className={styles.favIcon} /></span>
                     {
                         data.vote_average > 0 &&
                         <span className={styles.circleWrapper}><CircleProgress percentage={Math.floor(data.vote_average * 10) / 10} /></span>

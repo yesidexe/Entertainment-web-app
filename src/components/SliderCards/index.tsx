@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { imagePath } from '../../utils';
 import { HeartIcon, MovieIcon, DeviceTvIcon } from '../Icons';
 import styles from './trendingSliderCards.module.css'
@@ -11,9 +11,11 @@ type TypeSliderCards = {
 }
 
 function SliderCards({ type,data,imageType }:TypeSliderCards) {
+    const navigate = useNavigate()
 
     const handleClick = (e:MouseEvent<HTMLSpanElement>)=>{
-        e.stopPropagation()
+        e.preventDefault();
+        navigate("/favorites")
     }
 
     return (
@@ -21,7 +23,9 @@ function SliderCards({ type,data,imageType }:TypeSliderCards) {
             <figure>
                 <img alt={data.title} width={'100%'} height={'100%'} src={imageType==='poster'?imagePath(data.poster_path):imagePath(data.backdrop_path)} />
             </figure>
-            <span onClick={(e) => handleClick(e)} className={styles.favWrapper}><HeartIcon strokeWidth={2} className={styles.favIcon} /></span>
+            <span onClick={(e) => handleClick(e)} className={styles.favWrapper}>
+                <HeartIcon strokeWidth={2} className={styles.favIcon} />
+            </span>
             <div className={styles.cardDetails}>
                 <span>
                     {
